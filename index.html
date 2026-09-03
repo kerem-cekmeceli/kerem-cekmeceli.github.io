@@ -4,7 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faruk Kerem Cekmeceli — AI / ML Engineer</title>
-    <meta name="description" content="AI & ML Engineer specializing in computer vision, multimodal learning, and foundation models. Based in Zurich, Switzerland.">
+    <meta name="description" content="AI & ML Engineer specializing in computer vision, vision-language models, and taking ML systems from research to production. Based in Zurich, Switzerland.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0F1419" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://kerem-cekmeceli.github.io/">
+
+    <!-- Social preview -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Faruk Kerem Cekmeceli">
+    <meta property="og:title" content="Faruk Kerem Cekmeceli — AI / ML Engineer">
+    <meta property="og:description" content="Computer vision, vision-language models, and taking ML systems from research to production. ETH Zurich MSc, published at ECCV 2024. Based in Zurich.">
+    <meta property="og:url" content="https://kerem-cekmeceli.github.io/">
+    <meta property="og:image" content="https://kerem-cekmeceli.github.io/Pictures/CV_pic.jpg">
+    <meta property="og:image:alt" content="Portrait of Faruk Kerem Cekmeceli">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Faruk Kerem Cekmeceli — AI / ML Engineer">
+    <meta name="twitter:description" content="Computer vision, vision-language models, and taking ML systems from research to production. ETH Zurich MSc, published at ECCV 2024. Based in Zurich.">
+    <meta name="twitter:image" content="https://kerem-cekmeceli.github.io/Pictures/CV_pic.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Faruk Kerem Cekmeceli",
+      "jobTitle": "AI / ML Engineer",
+      "worksFor": { "@type": "Organization", "name": "Comparis.ch" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "ETH Zurich" },
+        { "@type": "CollegeOrUniversity", "name": "EPFL" }
+      ],
+      "address": { "@type": "PostalAddress", "addressLocality": "Zurich", "addressCountry": "CH" },
+      "url": "https://kerem-cekmeceli.github.io/",
+      "image": "https://kerem-cekmeceli.github.io/Pictures/CV_pic.jpg",
+      "email": "mailto:fk.cekmeceli@gmail.com",
+      "sameAs": [
+        "https://github.com/kerem-cekmeceli",
+        "https://www.linkedin.com/in/faruk-kerem-cekmeceli/",
+        "https://scholar.google.com/citations?user=ZvjT_T4AAAAJ"
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -27,12 +69,47 @@
             --gray-800: #2A2A27;
             --gray-900: #1A1A18;
             --accent: #E07A30;
+            --nav-bg: rgba(250, 250, 247, 0.85);
+            --footer-bg: #001D3D;
+            --shadow-blue: rgba(0,79,144,0.08);
+            --hero-glow-1: rgba(0,79,144,0.06);
+            --hero-glow-2: rgba(224,122,48,0.04);
             --font-display: 'Syne', sans-serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+            color-scheme: light;
         }
+        html[data-theme="dark"] {
+            --blue: #6FB1E8;
+            --blue-dark: #9CC9F0;
+            --blue-deep: #E6EEF7;
+            --blue-light: #16283D;
+            --blue-muted: #4C86B8;
+            --cream: #0F1419;
+            --white: #161C24;
+            --gray-50: #1B222B;
+            --gray-100: #242D38;
+            --gray-200: #34404E;
+            --gray-400: #7C8794;
+            --gray-600: #AAB4BF;
+            --gray-800: #DCE3EA;
+            --gray-900: #F2F5F8;
+            --accent: #F0955A;
+            --nav-bg: rgba(15, 20, 25, 0.85);
+            --footer-bg: #0A0E13;
+            --shadow-blue: rgba(0,0,0,0.35);
+            --hero-glow-1: rgba(111,177,232,0.08);
+            --hero-glow-2: rgba(240,149,90,0.05);
+            color-scheme: dark;
+        }
+        html[data-theme="dark"] .hero-name span {
+            background: linear-gradient(135deg, #6FB1E8 0%, #B6D6F2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        html[data-theme="dark"] .hero-photo img { border-color: var(--gray-200); }
 
         html {
             scroll-behavior: smooth;
@@ -61,6 +138,35 @@
         }
         a:hover { color: var(--blue-dark); }
 
+        /* ── ACCESSIBILITY ── */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 200;
+            padding: 0.6rem 1rem;
+            background: var(--blue);
+            color: #fff;
+            border-radius: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus { top: 0.75rem; color: #fff; outline: none; }
+        :focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        .hero-link:focus-visible, .pub-link:focus-visible, .theme-toggle:focus-visible, .footer-link:focus-visible, .pub-cite:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 3px;
+        }
+        .nav-links a:focus-visible { outline-offset: 4px; }
+        .nav-hamburger:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
         /* ── NAV ── */
         nav {
             position: fixed;
@@ -73,7 +179,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: rgba(250, 250, 247, 0.85);
+            background: var(--nav-bg);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid transparent;
@@ -134,6 +240,110 @@
             transition: all 0.3s ease;
         }
 
+        .nav-links a.active { color: var(--blue); }
+        .nav-links a.active::after { width: 100%; }
+        .nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+        .theme-toggle {
+            width: 34px; height: 34px; border-radius: 50%;
+            border: 1px solid var(--gray-200); background: var(--white);
+            color: var(--gray-600); cursor: pointer;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: all 0.25s ease;
+        }
+        .theme-toggle:hover { color: var(--blue); border-color: var(--blue); }
+        .theme-toggle svg { width: 16px; height: 16px; }
+        .theme-toggle .icon-moon { display: none; }
+        html[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+        html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+
+        /* hero facts strip */
+        .hero-facts {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            gap: 0 2.5rem;
+            margin-top: 3rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid var(--gray-100);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s var(--ease-out-expo) 0.8s forwards;
+        }
+        .fact { display: flex; flex-direction: column; gap: 0.15rem; }
+        .fact-value {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--blue-deep);
+            letter-spacing: -0.01em;
+        }
+        .fact-label {
+            font-family: var(--font-mono);
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--gray-400);
+        }
+
+        /* timeline extras */
+        .timeline-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.85rem; }
+        .timeline-tags span {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            padding: 0.22rem 0.55rem;
+            border-radius: 100px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-100);
+            color: var(--gray-400);
+            letter-spacing: 0.02em;
+        }
+        .timeline-bullets li strong { color: var(--gray-800); font-weight: 600; }
+        .timeline-bullets a { text-decoration: underline; text-underline-offset: 2px; }
+        .badge-current {
+            display: inline-block;
+            margin-left: 0.5rem;
+            padding: 0.12rem 0.5rem;
+            border-radius: 100px;
+            background: var(--blue-light);
+            color: var(--blue);
+            font-size: 0.6rem;
+            letter-spacing: 0.08em;
+            vertical-align: middle;
+        }
+        .timeline-item.is-current .timeline-dot {
+            background: var(--blue);
+            box-shadow: 0 0 0 0 rgba(0,79,144,0.35);
+            animation: pulse 2.4s ease-out infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0,79,144,0.35); }
+            70% { box-shadow: 0 0 0 9px rgba(0,79,144,0); }
+            100% { box-shadow: 0 0 0 0 rgba(0,79,144,0); }
+        }
+
+        /* publication extras */
+        .pub-topline { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        .pub-cite {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--gray-600);
+            display: inline-flex; align-items: baseline; gap: 0.35rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 100px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-100);
+            margin-bottom: 0.75rem;
+        }
+        .pub-cite:hover { border-color: var(--blue); color: var(--blue); }
+        .pub-cite-num { font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; color: var(--blue-dark); }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+            .reveal, .hero-label, .hero-name, .hero-subtitle, .hero-links, .hero-photo, .hero-facts, .hero-scroll-hint { opacity: 1 !important; transform: none !important; }
+            html { scroll-behavior: auto; }
+        }
+
         /* ── HERO ── */
         .hero {
             min-height: 100vh;
@@ -151,7 +361,7 @@
             width: 700px;
             height: 700px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(0,79,144,0.06) 0%, transparent 70%);
+            background: radial-gradient(circle, var(--hero-glow-1) 0%, transparent 70%);
             pointer-events: none;
         }
         .hero::after {
@@ -162,7 +372,7 @@
             width: 500px;
             height: 500px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(224,122,48,0.04) 0%, transparent 70%);
+            background: radial-gradient(circle, var(--hero-glow-2) 0%, transparent 70%);
             pointer-events: none;
         }
         .hero-inner {
@@ -184,7 +394,7 @@
         }
         .hero-name {
             font-family: var(--font-display);
-            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-size: clamp(2.6rem, 6vw, 4.8rem);
             font-weight: 800;
             line-height: 1.05;
             letter-spacing: -0.03em;
@@ -682,7 +892,7 @@
 
         /* ── FOOTER ── */
         footer {
-            background: var(--blue-deep);
+            background: var(--footer-bg);
             color: rgba(255,255,255,0.6);
             padding: 4rem 2rem 3rem;
             margin-top: 3rem;
@@ -760,7 +970,7 @@
                 top: 60px;
                 left: 0;
                 right: 0;
-                background: rgba(250,250,247,0.97);
+                background: var(--nav-bg);
                 backdrop-filter: blur(20px);
                 flex-direction: column;
                 padding: 1.5rem;
@@ -772,6 +982,7 @@
             .hero { padding: 100px 1.25rem 60px; min-height: auto; }
             .hero-content { flex-direction: column-reverse; gap: 2rem; align-items: flex-start; }
             .hero-photo img { width: 150px; height: 150px; }
+            .hero-facts { grid-template-columns: repeat(2, 1fr); gap: 1.25rem 1.5rem; }
             section { padding: 3.5rem 1.25rem; }
             .timeline { padding-left: 2rem; }
             .timeline-dot { left: -2rem; }
@@ -789,6 +1000,8 @@
 </head>
 <body>
 
+<a href="#summary" class="skip-link">Skip to content</a>
+
 <!-- NAV -->
 <nav id="nav">
     <a href="#" class="nav-logo">FK Cekmeceli</a>
@@ -799,9 +1012,15 @@
         <li><a href="#publications">Publications</a></li>
         <li><a href="#projects">Projects</a></li>
     </ul>
-    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
     </button>
+    </div>
 </nav>
 
 <!-- HERO -->
@@ -811,7 +1030,7 @@
         <div class="hero-text">
         <div class="hero-label">AI / ML Engineer &middot; Zurich, Switzerland</div>
         <h1 class="hero-name">Faruk Kerem<br><span>Cekmeceli</span></h1>
-        <p class="hero-subtitle">Specializing in computer vision, multimodal learning, and foundation models. Published at ECCV 2024. Building intelligent systems from research to production.</p>
+        <p class="hero-subtitle">Computer vision, vision-language models, and taking ML systems from research to production. Currently leading the end-to-end development of Comparis.ch's multimodal real-estate image search.</p>
         <div class="hero-links">
 
             <a href="mailto:fk.cekmeceli@gmail.com" class="hero-link">
@@ -827,6 +1046,12 @@
                 LinkedIn
             </a>
         </div>
+        <div class="hero-facts">
+            <div class="fact"><span class="fact-value">ETH Zurich</span><span class="fact-label">MSc EE &amp; IT</span></div>
+            <div class="fact"><span class="fact-value">ECCV 2024</span><span class="fact-label">Published &middot; 18 citations</span></div>
+            <div class="fact"><span class="fact-value">900K+</span><span class="fact-label">Photos indexed in production</span></div>
+            <div class="fact"><span class="fact-value">Zurich</span><span class="fact-label">Swiss B permit</span></div>
+        </div>
         <div class="hero-scroll-hint">
             <span class="scroll-line"></span> Scroll to explore
         </div>
@@ -838,6 +1063,7 @@
     </div>
 </header>
 
+<main id="main">
 <!-- SUMMARY -->
 <section id="summary">
     <div class="reveal">
@@ -847,7 +1073,7 @@
             <div class="section-divider"></div>
         </div>
         <p class="summary-text">
-            AI &amp; ML engineer specializing in <strong>computer vision</strong>, <strong>multimodal learning</strong>, and <strong>foundation models</strong>. Published at <strong>ECCV 2024</strong> based on master's thesis work at ETH Zurich's Computer Vision Laboratory. Experience spanning medical image segmentation, multi-sensor fusion, and scalable ML pipelines on GCP. Currently building multimodal search systems with Vision-Language Models at <strong>Comparis</strong>.
+            AI &amp; ML engineer specializing in <strong>computer vision</strong>, <strong>vision-language models</strong>, and taking ML systems <strong>from research to production</strong>. Currently leading the end-to-end development of <strong>Comparis.ch</strong>'s multimodal real-estate image search (SigLIP2, vector search, LLM-based query understanding), from architecture through deployment. ETH Zurich MSc; published at <strong>ECCV 2024</strong> on foundation models for medical image segmentation.
         </p>
     </div>
 </section>
@@ -862,16 +1088,22 @@
         </div>
     </div>
     <div class="timeline">
-        <div class="timeline-item reveal">
+        <div class="timeline-item reveal is-current">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">Nov 2025 &ndash; Present <span class="timeline-place">&middot; Zurich, Switzerland</span></div>
+            <div class="timeline-date">Nov 2025 &ndash; Present <span class="timeline-place">&middot; Zurich, Switzerland</span> <span class="badge-current">Current</span></div>
             <div class="timeline-title">AI / ML Engineer</div>
-            <div class="timeline-org">Comparis (Decisis Services AG)</div>
+            <div class="timeline-org">Comparis.ch (Decisis Services AG)</div>
             <ul class="timeline-bullets">
-                <li>Own the full technical lifecycle of a multimodal search feature &mdash; from architecture design to production deployment &mdash; presenting progress and roadmap to both technical and business stakeholders.</li>
-                <li>Architected a scalable embedding computation pipeline using GCP Cloud Run Jobs with NVIDIA GPUs, leveraging Vision-Language Models (VLMs) for multimodal search.</li>
-                <li>Designed and built RESTful APIs and multiple task-specific decoder heads for downstream applications including classification and detection.</li>
+                <li>Lead end-to-end development of <strong>Comparis.ch's multimodal image search</strong>: 10 microservices and GPU workers (Cloud Run, Pub/Sub, Vertex AI Vector Search, BigQuery) indexing ~900K photos with SigLIP2 embeddings; now the core retrieval tool of Comparis.ch's multi-agent property assistant (via MCP).</li>
+                <li>Built natural-language search: an LLM query decomposer (benchmarked multiple LLMs, tuned prompts and structured outputs for accuracy and latency) feeding cross-modal concept fusion; reduced search latency from up to 13&thinsp;s to ~2&thinsp;s.</li>
+                <li>Trained multi-task classification heads on SigLIP2 embeddings for a 45-label room/amenity taxonomy (test mAP 0.94); deployed in-stream to auto-label every indexed photo.</li>
+                <li>Built a multi-LLM labeling tool (Gemini, GPT, Claude; majority voting) to generate training labels at scale; trained ad-banner and watermark detectors (P/R &asymp; 0.96/0.95).</li>
+                <li>Shipped LLM-generated multilingual listing descriptions and cover-photo ranking; ONNX export, extensive test suite, CI, Airflow jobs, Confluence docs. Present results to technical and business stakeholders.</li>
+                <li>Prototyped LiDAR-scan floor-plan reconstruction, a swisstopo aerial-imagery service, and listing-photo quality assessment.</li>
             </ul>
+            <div class="timeline-tags">
+                <span>SigLIP2</span><span>Vertex AI Vector Search</span><span>Gemini</span><span>Cloud Run</span><span>Pub/Sub</span><span>BigQuery</span><span>PyTorch</span><span>ONNX</span><span>Airflow</span>
+            </div>
         </div>
         <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
@@ -883,6 +1115,7 @@
                 <li>Designed relational database schemas and deployed interactive dashboards, enabling real-time visibility into key business metrics.</li>
                 <li>Translated cross-functional business requirements into technical solutions and mentored a successor to ensure continuity of all delivered systems.</li>
             </ul>
+            <div class="timeline-tags"><span>Python</span><span>SAP</span><span>Power Platform</span><span>RPA</span><span>SQL</span></div>
         </div>
         <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
@@ -891,10 +1124,12 @@
             <div class="timeline-org">ETH Computer Vision Laboratory</div>
             <div class="timeline-meta">"Tuning Strategies for Foundation Models in Medical Imagery"</div>
             <ul class="timeline-bullets">
-                <li>Built a modular PyTorch segmentation framework with foundation models (DINOv2, SAM, MAE) and parameter-efficient fine-tuning (LoRA), evaluated across diverse medical imaging datasets.</li>
-                <li>Outperformed baseline methods on multiple benchmarks by introducing a novel HQHSAM decoder head that improved domain generalization.</li>
-                <li>Published at the OOD-CV Workshop at ECCV 2024; open-source code and full report available on GitHub.</li>
+                <li>Built a modular PyTorch framework for medical image segmentation: DINOv2, SAM, MedSAM, MAE and ResNet backbones, 11 decoder heads, and fine-tuning strategies from frozen and ladder tuning to Rein/LoRA and full fine-tuning, with UNet and Swin-UNet baselines.</li>
+                <li>Benchmarked domain generalization and test-time adaptation (entropy minimization, self-training) on 10 datasets across 4 anatomies (brain MRI, spine, prostate, brain tumor), evaluating volumetric Dice and mIoU with W&amp;B experiment tracking.</li>
+                <li>Introduced the HQHSAM decoder head, which outperformed baselines on multiple benchmarks with stronger out-of-distribution generalization.</li>
+                <li>Published at the OOD-CV Workshop at ECCV 2024; open-source code and full report available on <a href="https://github.com/kerem-cekmeceli/Foundation-Models-for-Medical-Imagery" target="_blank" rel="noopener">GitHub</a>.</li>
             </ul>
+            <div class="timeline-tags"><span>PyTorch</span><span>DINOv2</span><span>SAM</span><span>MAE</span><span>LoRA</span><span>W&amp;B</span></div>
         </div>
         <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
@@ -906,6 +1141,7 @@
                 <li>Designed a high-precision optical tracking system for ground truth acquisition and developed embedded ESP32 firmware for sensor pre-processing and wireless transmission via MQTT to AWS.</li>
                 <li>Presented pipeline design and model performance to stakeholders, covering deployment feasibility and future integration options.</li>
             </ul>
+            <div class="timeline-tags"><span>TensorFlow</span><span>KalmanNet</span><span>Sensor Fusion</span><span>ESP32</span><span>MQTT</span><span>AWS</span></div>
         </div>
     </div>
 </section>
@@ -923,19 +1159,19 @@
         <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-date">Sep 2021 &ndash; Aug 2025 <span class="timeline-place">&middot; Zurich, Switzerland</span></div>
-            <div class="timeline-title">MSc, Information Technology &amp; Electrical Engineering</div>
+            <div class="timeline-title">MSc in Electrical Engineering and Information Technology</div>
             <div class="timeline-org">ETH Zurich</div>
             <ul class="timeline-bullets">
                 <li>GPA: 5.26 / 6.00</li>
                 <li>Coursework: Deep Learning, Machine Learning, Computer Vision, IoT, Acoustics</li>
-                <li>Including internship periods</li>
+                <li>Including 1 year of internships</li>
             </ul>
         </div>
         <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-date">Sep 2018 &ndash; Aug 2021 <span class="timeline-place">&middot; Lausanne, Switzerland</span></div>
-            <div class="timeline-title">BSc, Electrical Engineering</div>
-            <div class="timeline-org">EPFL (Ecole Polytechnique Federale de Lausanne)</div>
+            <div class="timeline-title">BSc in Electrical Engineering</div>
+            <div class="timeline-org">EPFL (&Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne)</div>
             <ul class="timeline-bullets">
                 <li>GPA: 5.04 / 6.00</li>
                 <li>Coursework: Machine Learning, Signal Processing</li>
@@ -957,94 +1193,49 @@
         <div class="skill-card reveal">
             <h3>Machine Learning</h3>
             <div class="skill-tags">
-                <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">TensorFlow</span>
-                <span class="skill-tag">Keras</span>
-                <span class="skill-tag">Scikit-Learn</span>
-                <span class="skill-tag">XGBoost</span>
-                <span class="skill-tag">Lightning</span>
-                <span class="skill-tag">Hugging Face</span>
-                <span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">PyTorch</span><span class="skill-tag">PyTorch Lightning</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Keras</span><span class="skill-tag">Scikit-Learn</span><span class="skill-tag">XGBoost</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">OpenCV</span><span class="skill-tag">ONNX Runtime</span>
             </div>
         </div>
         <div class="skill-card reveal">
-            <h3>Foundation Models &amp; Fine-Tuning</h3>
+            <h3>Foundation Models &amp; LLMs</h3>
             <div class="skill-tags">
-                <span class="skill-tag">SAM</span>
-                <span class="skill-tag">DINOv2</span>
-                <span class="skill-tag">MAE</span>
-                <span class="skill-tag">CLIP</span>
-                <span class="skill-tag">Transformers</span>
-                <span class="skill-tag">LoRA</span>
-                <span class="skill-tag">Prompt Engineering</span>
-                <span class="skill-tag">Ollama</span>
+                <span class="skill-tag">SigLIP2 / CLIP</span><span class="skill-tag">DINOv2</span><span class="skill-tag">SAM</span><span class="skill-tag">MAE</span><span class="skill-tag">Transformers</span><span class="skill-tag">LoRA</span><span class="skill-tag">Gemini / OpenAI / Claude APIs</span><span class="skill-tag">Structured Output</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">Vector Search</span>
+            </div>
+        </div>
+        <div class="skill-card reveal">
+            <h3>Cloud &amp; MLOps</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">GCP</span><span class="skill-tag">Cloud Run</span><span class="skill-tag">Pub/Sub</span><span class="skill-tag">Vertex AI Vector Search</span><span class="skill-tag">BigQuery</span><span class="skill-tag">GCS</span><span class="skill-tag">AWS</span><span class="skill-tag">Docker</span><span class="skill-tag">Terraform</span><span class="skill-tag">Airflow</span><span class="skill-tag">CI/CD (GitHub Actions)</span><span class="skill-tag">Linux</span><span class="skill-tag">SLURM</span><span class="skill-tag">NVIDIA GPUs</span>
             </div>
         </div>
         <div class="skill-card reveal">
             <h3>Programming &amp; Tools</h3>
             <div class="skill-tags">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">C/C++</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">MATLAB</span>
-                <span class="skill-tag">Bash</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">FastAPI</span>
-                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Python</span><span class="skill-tag">C/C++</span><span class="skill-tag">SQL</span><span class="skill-tag">MATLAB</span><span class="skill-tag">Bash</span><span class="skill-tag">Git</span><span class="skill-tag">Flask</span><span class="skill-tag">Pydantic</span><span class="skill-tag">pytest</span><span class="skill-tag">Claude Code (agentic coding)</span>
             </div>
         </div>
         <div class="skill-card reveal">
-            <h3>Cloud &amp; Compute</h3>
+            <h3>Experimentation &amp; Evaluation</h3>
             <div class="skill-tags">
-                <span class="skill-tag">GCP</span>
-                <span class="skill-tag">Vertex AI</span>
-                <span class="skill-tag">BigQuery</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Linux</span>
-                <span class="skill-tag">SLURM</span>
-                <span class="skill-tag">HPC</span>
-                <span class="skill-tag">NVIDIA GPUs</span>
-            </div>
-        </div>
-        <div class="skill-card reveal">
-            <h3>Visualization &amp; Monitoring</h3>
-            <div class="skill-tags">
-                <span class="skill-tag">Matplotlib</span>
-                <span class="skill-tag">Seaborn</span>
-                <span class="skill-tag">W&amp;B</span>
-                <span class="skill-tag">TensorBoard</span>
-                <span class="skill-tag">LaTeX</span>
+                <span class="skill-tag">Vertex AI Training Jobs</span><span class="skill-tag">Ablation Studies</span><span class="skill-tag">Calibration</span><span class="skill-tag">Cross-validation</span><span class="skill-tag">mAP / F1 / IoU / Dice</span><span class="skill-tag">Weights &amp; Biases</span><span class="skill-tag">TensorBoard</span>
             </div>
         </div>
         <div class="skill-card reveal">
             <h3>Data &amp; Signal Processing</h3>
             <div class="skill-tags">
-                <span class="skill-tag">NumPy</span>
-                <span class="skill-tag">Pandas</span>
-                <span class="skill-tag">SciPy</span>
-                <span class="skill-tag">Pillow</span>
-                <span class="skill-tag">Nvidia Sionna</span>
+                <span class="skill-tag">NumPy</span><span class="skill-tag">Pandas</span><span class="skill-tag">SciPy</span><span class="skill-tag">Pillow</span><span class="skill-tag">FAISS</span><span class="skill-tag">BigQuery</span><span class="skill-tag">NVIDIA Sionna</span>
             </div>
         </div>
         <div class="skill-card reveal">
-            <h3>Experimentation</h3>
+            <h3>Architecture</h3>
             <div class="skill-tags">
-                <span class="skill-tag">Cross-validation</span>
-                <span class="skill-tag">F1 / IoU / Dice</span>
-                <span class="skill-tag">Grid Search</span>
-                <span class="skill-tag">Hyperparameter Tuning</span>
+                <span class="skill-tag">Event-driven Microservices</span><span class="skill-tag">REST API Design</span><span class="skill-tag">Dead-letter Queues &amp; Backfills</span><span class="skill-tag">Observability</span>
             </div>
         </div>
         <div class="skill-card reveal">
             <h3>Business &amp; Automation</h3>
             <div class="skill-tags">
-                <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">Power Automate</span>
-                <span class="skill-tag">Power Apps</span>
-                <span class="skill-tag">Excel</span>
-                <span class="skill-tag">SAP</span>
-                <span class="skill-tag">RPA</span>
+                <span class="skill-tag">Power BI</span><span class="skill-tag">Power Automate</span><span class="skill-tag">Power Apps</span><span class="skill-tag">Excel</span><span class="skill-tag">SAP</span><span class="skill-tag">RPA</span><span class="skill-tag">Confluence</span>
             </div>
         </div>
     </div>
@@ -1060,7 +1251,10 @@
         </div>
     </div>
     <div class="pub-card reveal">
-        <div class="pub-venue">OOD-CV Workshop &middot; ECCV 2024</div>
+        <div class="pub-topline">
+            <div class="pub-venue">OOD-CV Workshop &middot; ECCV 2024</div>
+            <a href="https://scholar.google.com/citations?user=ZvjT_T4AAAAJ" target="_blank" rel="noopener" class="pub-cite" title="Google Scholar"><span class="pub-cite-num">18</span> citations</a>
+        </div>
         <div class="pub-title">Do Vision Foundation Models Enhance Domain Generalization in Medical Image Segmentation?</div>
         <div class="pub-authors"><strong>Kerem Cekmeceli</strong>, Ertunc Erdil, Anna Susmelj, Ender Konukoglu, et al.</div>
         <div class="pub-links">
@@ -1071,6 +1265,10 @@
             <a href="https://github.com/kerem-cekmeceli/Foundation-Models-for-Medical-Imagery" target="_blank" rel="noopener" class="pub-link">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                 Code
+            </a>
+            <a href="https://scholar.google.com/citations?user=ZvjT_T4AAAAJ" target="_blank" rel="noopener" class="pub-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Scholar
             </a>
         </div>
     </div>
@@ -1197,12 +1395,20 @@
     </div>
 </section>
 
+</main>
+
+<!-- Analytics: GoatCounter (privacy-friendly, no cookies, GDPR-compliant, free for personal use).
+     To enable: 1) create a site at https://www.goatcounter.com  2) replace YOUR-CODE with your site code
+     3) move the <script> line out of this comment.
+<script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+-->
+
 <!-- FOOTER -->
 <footer>
     <div class="footer-inner">
         <div>
             <div class="footer-name">Faruk Kerem Cekmeceli</div>
-            <div class="footer-tagline">AI / ML Engineer based in Zurich, Switzerland. Open to collaborations and new opportunities.</div>
+            <div class="footer-tagline">AI / ML Engineer based in Zurich, Switzerland.</div>
         </div>
         <div class="footer-links">
             <a href="mailto:fk.cekmeceli@gmail.com" class="footer-link" aria-label="Email">
@@ -1215,11 +1421,49 @@
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
         </div>
-        <div class="footer-copy">&copy; 2025 Faruk Kerem Cekmeceli. All rights reserved.</div>
+        <div class="footer-copy">&copy; <span id="year">2026</span> Faruk Kerem Cekmeceli. All rights reserved.</div>
     </div>
 </footer>
 
 <script>
+    // Theme: stored choice > system preference
+    (function () {
+        const root = document.documentElement;
+        let stored = null;
+        try { stored = localStorage.getItem('theme'); } catch (e) {}
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const toggle = document.getElementById('themeToggle');
+        if (stored === 'dark' || (!stored && prefersDark)) root.setAttribute('data-theme', 'dark');
+        toggle.setAttribute('aria-pressed', String(root.getAttribute('data-theme') === 'dark'));
+        toggle.addEventListener('click', () => {
+            const dark = root.getAttribute('data-theme') === 'dark';
+            if (dark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme', 'dark');
+            toggle.setAttribute('aria-pressed', String(!dark));
+            try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch (e) {}
+        });
+    })();
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Active nav link while scrolling
+    (function () {
+        const links = Array.from(document.querySelectorAll('.nav-links a'));
+        const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+        const spy = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    links.forEach(l => {
+                        const on = l.getAttribute('href') === '#' + e.target.id;
+                        l.classList.toggle('active', on);
+                        if (on) l.setAttribute('aria-current', 'true'); else l.removeAttribute('aria-current');
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+        sections.forEach(sec => spy.observe(sec));
+    })();
+
     // Nav scroll effect
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
@@ -1230,10 +1474,21 @@
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
+        const open = navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', String(open));
     });
     navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => navLinks.classList.remove('open'));
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.focus();
+        }
     });
 
     // Reveal on scroll
