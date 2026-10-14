@@ -15,14 +15,14 @@
     <meta property="og:type" content="profile">
     <meta property="og:site_name" content="Faruk Kerem Cekmeceli">
     <meta property="og:title" content="Faruk Kerem Cekmeceli — AI / ML Engineer">
-    <meta property="og:description" content="Computer vision and multimodal AI, from model training to production. ETH Zurich MSc, EPFL BSc; first author of an OOD-CV Workshop paper at ECCV 2024. Based in Zurich.">
+    <meta property="og:description" content="Computer vision, multimodal and LLM systems, from model training to production. ETH Zurich MSc, EPFL BSc; first author of an OOD-CV Workshop paper at ECCV 2024. Based in Zurich.">
     <meta property="og:url" content="https://kerem-cekmeceli.github.io/">
     <meta property="og:image" content="https://kerem-cekmeceli.github.io/Pictures/CV_pic.jpg">
     <meta property="og:image:alt" content="Portrait of Faruk Kerem Cekmeceli">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Faruk Kerem Cekmeceli — AI / ML Engineer">
-    <meta name="twitter:description" content="Computer vision and multimodal AI, from model training to production. ETH Zurich MSc, EPFL BSc; first author of an OOD-CV Workshop paper at ECCV 2024. Based in Zurich.">
+    <meta name="twitter:description" content="Computer vision, multimodal and LLM systems, from model training to production. ETH Zurich MSc, EPFL BSc; first author of an OOD-CV Workshop paper at ECCV 2024. Based in Zurich.">
     <meta name="twitter:image" content="https://kerem-cekmeceli.github.io/Pictures/CV_pic.jpg">
 
     <script type="application/ld+json">
@@ -997,7 +997,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#publications">Publications</a></li>
-        <li><a href="#projects">Project</a></li>
+        <li><a href="#projects">Projects</a></li>
     </ul>
     <div class="nav-actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle theme">
@@ -1017,7 +1017,7 @@
         <div class="hero-text">
         <div class="hero-label">AI / ML Engineer &middot; Zurich, Switzerland</div>
         <h1 class="hero-name">Faruk Kerem<br><span>Cekmeceli</span></h1>
-        <p class="hero-subtitle">Computer vision and multimodal AI, from model training and evaluation to production deployment. Built image search and property enrichment services used by the Comparis AI agent.</p>
+        <p class="hero-subtitle">Computer vision, multimodal and LLM systems, from model training and evaluation to production deployment. Built image search and property enrichment services used by the Comparis AI agent.</p>
         <div class="hero-links">
             <a href="#experience" class="hero-link hero-link-primary">
                 View experience
@@ -1083,7 +1083,7 @@
             <ul class="timeline-bullets">
                 <li>Proposed and built <strong>Comparis.ch's multimodal property image search</strong> over <strong>≈900K photos</strong>, using SigLIP2 and Vertex AI Vector Search, powering the Comparis agent's visual-search tool.</li>
                 <li>Built a <strong>multi-LLM labeling pipeline</strong> and trained multi-task room/amenity classifiers on frozen SigLIP2 embeddings; their predictions drive search filters and listing descriptions.</li>
-                <li>Built the <strong>Search and Describe APIs</strong> behind the Comparis agent's MCP tools, turning natural-language requests into matching listing photos and generating listing descriptions (EN/DE/FR/IT).</li>
+                <li>Built the <strong>Search and Describe APIs</strong> behind the Comparis agent's MCP tools, turning natural-language requests into matching photos and generating listing descriptions (EN/DE/FR/IT).</li>
                 <li>Engineered a <strong>10-service GCP architecture</strong> with an image pipeline that updates the search index hourly, using L4 GPU embedding, Pub/Sub, Terraform, Airflow, and GitHub Actions CI.</li>
                 <li>Building a <strong>multilingual hybrid RAG search API</strong> for LLM agents over Comparis articles and insurance documents: Gemini embeddings + BM25, RRF, reranking; <strong>0.96 Hit@5</strong> on 1,360 queries.</li>
             </ul>
@@ -1126,7 +1126,7 @@
             <div class="timeline-title">Machine Learning Engineer Intern</div>
             <div class="timeline-org">NAGRA Kudelski Group</div>
             <ul class="timeline-bullets">
-                <li>Reduced RMS distance error by <strong>30%</strong> versus traditional filters using an LSTM-based KalmanNet in TensorFlow, fusing BLE, UWB, IMU, and pressure data.</li>
+                <li>Reduced indoor-positioning error by <strong>30%</strong> versus traditional filters using an LSTM-based KalmanNet in TensorFlow, fusing BLE, UWB, IMU, and pressure data.</li>
                 <li>Built optical ground-truth tracking and ESP32 sensor firmware with MQTT transmission to AWS; presented model performance and deployment feasibility to stakeholders.</li>
             </ul>
             <div class="timeline-tags"><span>TensorFlow</span><span>KalmanNet</span><span>Sensor Fusion</span><span>ESP32</span><span>MQTT</span><span>AWS</span></div>
@@ -1145,15 +1145,9 @@
     </div>
     <div class="skills-grid">
         <div class="skill-card reveal">
-            <h3>Software Engineering</h3>
+            <h3>LLMs &amp; Retrieval</h3>
             <div class="skill-tags">
-                <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Git</span><span class="skill-tag">Linux</span><span class="skill-tag">Flask</span><span class="skill-tag">agentic coding</span>
-            </div>
-        </div>
-        <div class="skill-card reveal">
-            <h3>Machine Learning</h3>
-            <div class="skill-tags">
-                <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">LLM APIs</span><span class="skill-tag">structured outputs</span><span class="skill-tag">RAG</span><span class="skill-tag">hybrid &amp; vector search</span><span class="skill-tag">reranking</span><span class="skill-tag">MCP</span>
             </div>
         </div>
         <div class="skill-card reveal">
@@ -1163,9 +1157,9 @@
             </div>
         </div>
         <div class="skill-card reveal">
-            <h3>LLMs &amp; Retrieval</h3>
+            <h3>Machine Learning</h3>
             <div class="skill-tags">
-                <span class="skill-tag">LLM APIs</span><span class="skill-tag">structured outputs</span><span class="skill-tag">RAG</span><span class="skill-tag">hybrid &amp; vector search</span><span class="skill-tag">reranking</span><span class="skill-tag">MCP</span>
+                <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">OpenCV</span>
             </div>
         </div>
         <div class="skill-card reveal">
@@ -1178,6 +1172,12 @@
             <h3>Data &amp; Evaluation</h3>
             <div class="skill-tags">
                 <span class="skill-tag">NumPy</span><span class="skill-tag">Pandas</span><span class="skill-tag">BigQuery</span><span class="skill-tag">Weights &amp; Biases</span><span class="skill-tag">ablation studies</span><span class="skill-tag">calibration</span>
+            </div>
+        </div>
+        <div class="skill-card reveal">
+            <h3>Software Engineering</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Git</span><span class="skill-tag">Linux</span><span class="skill-tag">Flask</span><span class="skill-tag">agentic coding</span>
             </div>
         </div>
     </div>
@@ -1228,7 +1228,7 @@
     <div class="pub-card reveal">
         <div class="pub-topline">
             <div class="pub-venue">OOD-CV Workshop &middot; ECCV 2024</div>
-            <time class="pub-date" datetime="2025-05">May 2025</time>
+            <time class="pub-date" datetime="2024-09">Sep 2024</time>
         </div>
         <div class="pub-title">Do Vision Foundation Models Enhance Domain Generalization in Medical Image Segmentation?</div>
         <div class="pub-authors"><strong>Kerem Cekmeceli</strong>, Meva Himmetoglu, Guney I. Tombak, &hellip;, Ender Konukoglu</div>
@@ -1254,7 +1254,7 @@
     <div class="reveal">
         <div class="section-header">
             <div class="section-label">Portfolio</div>
-            <h2 class="section-title">Selected Project</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="section-divider"></div>
         </div>
     </div>
@@ -1283,17 +1283,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </div>
             <div>
-                <div class="info-label">Turkish</div>
-                <div class="info-detail">Native</div>
-            </div>
-        </div>
-        <div class="info-item reveal">
-            <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <div>
                 <div class="info-label">English</div>
-                <div class="info-detail">C2</div>
+                <div class="info-detail">C1</div>
             </div>
         </div>
         <div class="info-item reveal">
@@ -1303,6 +1294,15 @@
             <div>
                 <div class="info-label">French</div>
                 <div class="info-detail">C1</div>
+            </div>
+        </div>
+        <div class="info-item reveal">
+            <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+                <div class="info-label">Turkish</div>
+                <div class="info-detail">Native</div>
             </div>
         </div>
         <div class="info-item reveal">
@@ -1329,7 +1329,7 @@
     <div class="info-grid">
         <div class="info-item reveal">
             <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
             </div>
             <div><div class="info-label">Outdoors</div><div class="info-detail">Motorcycling</div></div>
         </div>
@@ -1341,7 +1341,7 @@
         </div>
         <div class="info-item reveal">
             <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
             <div><div class="info-label">Sports</div><div class="info-detail">Skiing, Scuba Diving</div></div>
         </div>
