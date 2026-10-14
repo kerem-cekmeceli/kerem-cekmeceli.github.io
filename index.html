@@ -1083,9 +1083,9 @@
             <ul class="timeline-bullets">
                 <li>Proposed and built <strong>Comparis.ch's multimodal property image search</strong> over <strong>≈900K photos</strong>, using SigLIP2 and Vertex AI Vector Search; actively used by the Comparis agent.</li>
                 <li>Built a multi-LLM labeling pipeline and trained multi-task room/amenity classifiers on frozen SigLIP2 embeddings; achieved <strong>0.94 amenity mAP</strong> versus a 0.92 linear baseline on an LLM-labeled test set.</li>
-                <li>Built the <strong>Search API</strong>, combining LLM query decomposition, structured property filters, and multimodal retrieval to match visual requirements across different photos of the same listing.</li>
-                <li>Built the <strong>Describe API</strong>, combining trained room/amenity classifier outputs across listing photos with property metadata and optional Gemini-generated descriptions (EN/DE/FR/IT); used by the Comparis agent via MCP tools.</li>
+                <li>Built the <strong>Search and Describe APIs</strong> behind the Comparis agent's MCP tools: Search pairs LLM query decomposition and filters with multimodal retrieval across a listing's photos; Describe fuses classifier outputs and metadata into optional Gemini descriptions (EN/DE/FR/IT).</li>
                 <li>Engineered a <strong>10-service GCP architecture</strong> with an image pipeline that continuously updates the search index, using GPU embedding workers, Pub/Sub with dead-letter recovery, Terraform, Airflow, and GitHub Actions CI.</li>
+                <li>Building a <strong>multilingual hybrid RAG search API</strong> for LLM agents over Comparis articles and insurance documents: Gemini embeddings + BM25, RRF, reranking; <strong>0.96 Hit@5</strong> on 1,360 queries.</li>
             </ul>
             <div class="timeline-links">
                 <a href="https://en.comparis.ch/agent" target="_blank" rel="noopener" class="experience-link">
@@ -1094,7 +1094,7 @@
                 </a>
             </div>
             <div class="timeline-tags">
-                <span>SigLIP2</span><span>Vertex AI Vector Search</span><span>Gemini</span><span>Cloud Run</span><span>Pub/Sub</span><span>BigQuery</span><span>PyTorch</span><span>ONNX</span><span>Airflow</span><span>Terraform</span><span>MCP</span>
+                <span>SigLIP2</span><span>Vertex AI Vector Search</span><span>Gemini</span><span>RAG</span><span>Cloud Run</span><span>Pub/Sub</span><span>BigQuery</span><span>PyTorch</span><span>ONNX</span><span>Airflow</span><span>Terraform</span><span>MCP</span>
             </div>
         </div>
         <div class="timeline-item reveal">
@@ -1165,7 +1165,7 @@
         <div class="skill-card reveal">
             <h3>LLMs &amp; Retrieval</h3>
             <div class="skill-tags">
-                <span class="skill-tag">LLM APIs</span><span class="skill-tag">structured outputs</span><span class="skill-tag">RAG</span><span class="skill-tag">vector search</span><span class="skill-tag">MCP</span>
+                <span class="skill-tag">LLM APIs</span><span class="skill-tag">structured outputs</span><span class="skill-tag">RAG</span><span class="skill-tag">hybrid &amp; vector search</span><span class="skill-tag">reranking</span><span class="skill-tag">MCP</span>
             </div>
         </div>
         <div class="skill-card reveal">
